@@ -30,6 +30,14 @@ if [ "${RENAME_IMAGE_REPO}" == "true" ]; then
   cp ${TMP_FILE} ${TO_PROJECT_FILE}
 fi 
 
+echo "Removing PV references for PVCs (forcing volume recreation)..."
+grep -v volumeName ${TO_PROJECT_FILE} > ${TMP_FILE}
+cp ${TMP_FILE} ${TO_PROJECT_FILE}
+grep -v pv.kubernetes.io/bind-completed ${TO_PROJECT_FILE} > ${TMP_FILE}
+cp ${TMP_FILE} ${TO_PROJECT_FILE}
+grep -v pv.kubernetes.io/bound-by-controller ${TO_PROJECT_FILE} > ${TMP_FILE}
+cp ${TMP_FILE} ${TO_PROJECT_FILE}
+
 echo "Creating new project with name ${TO_PROJECT_NAME}"
 oc new-project ${TO_PROJECT_NAME}
 
