@@ -11,6 +11,6 @@ fi
 echo "Selecting project ${PROJECT_NAME}"
 oc project ${PROJECT_NAME}
 
-echo "Exporting DeploymentConfigurations to ${OUTPUT_FILE}"
+echo "Exporting project objects to ${OUTPUT_FILE}"
 oc export Secret,PersistentVolumeClaim,ConfigMap,RoleBinding,DeploymentConfig,Service,Route > ${OUTPUT_FILE}
 
