@@ -10,10 +10,11 @@ TMP_FILE=${TMPDIR}/_tempfile.yml
 
 ROUTES_SUFIX=${3}
 RENAME_IMAGE_REPO=${4}
+ROLLOUT_PAUSED=${5}
 
 if [ "${FROM_PROJECT_NAME}" == "" -o "${TO_PROJECT_NAME}" == "" ]; then
-  echo "Usage: ${0} [from project name] [new project name] [route hostname sufix] [rename images repository reference?]"
-  echo "    Example: ${0} super_project another_super_project .another.superproject.com false"
+  echo "Usage: ${0} [from project name] [new project name] [route hostname sufix] [rename images repository reference?] [clone with paused rollouts]"
+  echo "    Example: ${0} super_project another_super_project .another.superproject.com false false"
   exit 1
 fi
 
@@ -37,7 +38,6 @@ if [ "${RENAME_IMAGE_REPO}" == "true" ]; then
 fi 
 
 echo "Renaming routes hostname to sufix ${ROUTES_SUFIX}..."
-IFS=$'\n'
 hostnames=($(more ${TO_PROJECT_FILE} | grep -e "^    host" | cut -f6 -d ' '))
 route_names=($(more ${TO_PROJECT_FILE} | grep -e "^    host" -B 2 | grep name: | cut -f6 -d ' '))
 for i in ${!hostnames[@]}; do
@@ -48,6 +48,13 @@ for i in ${!hostnames[@]}; do
   echo "ROUTE ${rn} --> ${new_hostname}"
   cp ${TMP_FILE} ${TO_PROJECT_FILE}
 done
+
+if [ "$ROLLOUT_PAUSED" == "true" ]; then
+  echo "Setting rollouts to paused"
+  sed -e 's/test: false/test: false \'$'\n    paused: true/g' ${TO_PROJECT_FILE} > ${TMP_FILE}
+  cp ${TMP_FILE} ${TO_PROJECT_FILE}  
+  cat ${TO_PROJECT_FILE}
+fi
 
 echo "Removing PV references for PVCs (forcing volume recreation)..."
 grep -v volumeName ${TO_PROJECT_FILE} > ${TMP_FILE}
