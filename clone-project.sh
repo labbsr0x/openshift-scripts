@@ -63,3 +63,9 @@ oc new-project ${TO_PROJECT_NAME}
 echo "Create objects on the new project"
 oc create -f ${TO_PROJECT_FILE}
 
+echo "Authorize newly cloned project to pull images from another"
+if [ "$RENAME_IMAGE_REPO" != "true" ]; then
+   oc policy add-role-to-user \
+       system:image-puller system:serviceaccount:$FROM_PROJECT_NAME:default -n TO_PROJECT_NAME 
+fi
+
