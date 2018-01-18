@@ -1,0 +1,320 @@
+[] 
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   accept_asset_price: 38428.41,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   accept_qty: 0.00424165,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   expiration_date: '2018-01-18T04:04:08.878Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   account_id: '923bb59e-da6c-4ebe-9a3a-d4e1724fdd8f',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   lock_unspent_txid: 'fe4dc6135bbcb2f10670eede8495f2daa159be9785a233a73fae1508fd6db5fe',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   lock_unspent_vout: 0 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): INSERT INTO "orders" ("id","account_id","offer_asset","offer_qty","accept_asset","accept_qty","accept_asset_price","lock_unspent_txid","lock_unspent_vout","expiration_date","createdAt","updatedAt") VALUES ('eac39ff7-4383-4e7a-a4c2-a99496256670','923bb59e-da6c-4ebe-9a3a-d4e1724fdd8f','BRL','163.00','BTC','0.00424165','38428.44','fe4dc6135bbcb2f10670eede8495f2daa159be9785a233a73fae1508fd6db5fe',0,'2018-01-18 04:04:08.878 +00:00','2018-01-18 04:01:38.997 +00:00','2018-01-18 04:01:38.997 +00:00') RETURNING *;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:39.003Z DEBUG controllers/order.js:64  RESPINSERT {"id":"eac39ff7-4383-4e7a-a4c2-a99496256670","offer_asset":"BRL","offer_qty":"163.00","accept_asset":"BTC","accept_asset_price":"38428.44","accept_qty":"0.00424165","expiration_date":"2018-01-18T04:04:08.878Z","account_id":"923bb59e-da6c-4ebe-9a3a-d4e1724fdd8f","lock_unspent_txid":"fe4dc6135bbcb2f10670eede8495f2daa159be9785a233a73fae1508fd6db5fe","lock_unspent_vout":"0","updatedAt":"2018-01-18T04:01:38.997Z","createdAt":"2018-01-18T04:01:38.997Z","trade_id":null,"status":null,"source_id":null}
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:39.004Z DEBUG controllers/order.js:136 [order.js] updating order
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): UPDATE "orders" SET "id"='eac39ff7-4383-4e7a-a4c2-a99496256670',"offer_asset"='BRL',"offer_qty"='163.00',"accept_asset"='BTC',"accept_asset_price"='38428.44',"accept_qty"='0.00424165',"expiration_date"='2018-01-18 04:04:08.878 +00:00',"account_id"='923bb59e-da6c-4ebe-9a3a-d4e1724fdd8f',"lock_unspent_txid"='fe4dc6135bbcb2f10670eede8495f2daa159be9785a233a73fae1508fd6db5fe',"lock_unspent_vout"='0',"updatedAt"='2018-01-18 04:01:39.005 +00:00',"createdAt"='2018-01-18 04:01:38.997 +00:00',"trade_id"=NULL,"status"='OPEN',"source_id"=NULL WHERE "id" = 'eac39ff7-4383-4e7a-a4c2-a99496256670'
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.503Z DEBUG services/OrderExpiredExecutor.js:12 Order Expired Executor
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.505Z INFO  services/AccountService.js:63 firing purge for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.507Z DEBUG controllers/order.js:170 offerQty  10
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.509Z DEBUG controllers/order.js:171 offerAsset  BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.511Z DEBUG controllers/order.js:172 acceptAsset  BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where status='OPEN' and offer_asset = 'BTC' and accept_asset = 'BRL' and expiration_date > now() order by accept_asset_price asc  LIMIT 5 OFFSET 0;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.532Z INFO  services/AccountService.js:26 requesting address for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.538Z DEBUG controllers/order.js:185 Number of orders ->5
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.539Z DEBUG controllers/order.js:189 -> BTC , 0.00422034 BRL 163.00
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.540Z DEBUG controllers/order.js:191 offerAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BRL', fractionDigits: 2, centFactor: 100 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 16300 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.541Z DEBUG controllers/order.js:192 acceptAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BTC', fractionDigits: 8, centFactor: 100000000 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 0 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.542Z INFO  util/AssetValue.js:71    LESS THAN .. 16300- 1000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.544Z INFO  util/AssetValue.js:71    LESS THAN .. 1000- 1000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.545Z DEBUG controllers/order.js:215 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.546Z DEBUG controllers/order.js:216 acceptAsset BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.547Z DEBUG controllers/order.js:217 offerAsset BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.548Z DEBUG controllers/order.js:218 offerAmount 10
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.549Z DEBUG controllers/order.js:219 offerQty 0.00025892
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.550Z DEBUG controllers/order.js:220 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.551Z DEBUG controllers/order.js:234 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.552Z DEBUG controllers/order.js:235 Exchange INFO 
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.553Z DEBUG controllers/order.js:236 { qty: 0.00025763,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   accept_asset_price: 38621.97,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_accept_asset: 0.00000129,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_offer_asset: 0.05,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   date: 2018-01-18T04:01:46.551Z }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.554Z DEBUG controllers/order.js:237 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.565Z INFO  services/AccountService.js:29 resp.data [ { id: 'cead00b3-72e9-451f-aa69-45e0e67b2f3e',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     name: 'Flávio de Oliveira Stutz',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     asset_address: '12eM8hAVoV5ZHec1mqqFiaCbwPxusJ8LSrbThq',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     username: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     email: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     birthDate: '1981-07-11T00:00:00.000Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     cpf: '00781458994',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     ddd: '61',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     phoneNumber: '996617044',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountBranch: '8915',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountNumber: '33101930',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     createdAt: '2018-01-15T12:47:15.960Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     updatedAt: '2018-01-15T12:47:15.960Z' } ]
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where account_id = 'cead00b3-72e9-451f-aa69-45e0e67b2f3e'  and status='OPEN'  and expiration_date < now() order by "expiration_date" desc;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.754Z DEBUG services/OrderExpiredExecutor.js:12 Order Expired Executor
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.756Z INFO  services/AccountService.js:63 firing purge for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.758Z DEBUG controllers/order.js:170 offerQty  10
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.760Z DEBUG controllers/order.js:171 offerAsset  BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.762Z DEBUG controllers/order.js:172 acceptAsset  BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where status='OPEN' and offer_asset = 'BTC' and accept_asset = 'BRL' and expiration_date > now() order by accept_asset_price asc  LIMIT 5 OFFSET 0;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.782Z INFO  services/AccountService.js:26 requesting address for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.789Z DEBUG controllers/order.js:185 Number of orders ->5
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.790Z DEBUG controllers/order.js:189 -> BTC , 0.00422034 BRL 163.00
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.791Z DEBUG controllers/order.js:191 offerAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BRL', fractionDigits: 2, centFactor: 100 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 16300 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.793Z DEBUG controllers/order.js:192 acceptAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BTC', fractionDigits: 8, centFactor: 100000000 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 0 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.794Z INFO  util/AssetValue.js:71    LESS THAN .. 16300- 1000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.795Z INFO  util/AssetValue.js:71    LESS THAN .. 1000- 1000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.796Z DEBUG controllers/order.js:215 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.797Z DEBUG controllers/order.js:216 acceptAsset BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.798Z DEBUG controllers/order.js:217 offerAsset BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.799Z DEBUG controllers/order.js:218 offerAmount 10
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.800Z DEBUG controllers/order.js:219 offerQty 0.00025892
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.801Z DEBUG controllers/order.js:220 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.802Z DEBUG controllers/order.js:234 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.804Z DEBUG controllers/order.js:235 Exchange INFO 
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.805Z DEBUG controllers/order.js:236 { qty: 0.00025763,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   accept_asset_price: 38621.97,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_accept_asset: 0.00000129,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_offer_asset: 0.05,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   date: 2018-01-18T04:01:46.802Z }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.806Z DEBUG controllers/order.js:237 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:46.816Z INFO  services/AccountService.js:29 resp.data [ { id: 'cead00b3-72e9-451f-aa69-45e0e67b2f3e',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     name: 'Flávio de Oliveira Stutz',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     asset_address: '12eM8hAVoV5ZHec1mqqFiaCbwPxusJ8LSrbThq',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     username: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     email: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     birthDate: '1981-07-11T00:00:00.000Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     cpf: '00781458994',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     ddd: '61',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     phoneNumber: '996617044',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountBranch: '8915',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountNumber: '33101930',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     createdAt: '2018-01-15T12:47:15.960Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     updatedAt: '2018-01-15T12:47:15.960Z' } ]
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where account_id = 'cead00b3-72e9-451f-aa69-45e0e67b2f3e'  and status='OPEN'  and expiration_date < now() order by "expiration_date" desc;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.059Z DEBUG services/OrderExpiredExecutor.js:12 Order Expired Executor
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.061Z INFO  services/AccountService.js:63 firing purge for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.063Z DEBUG controllers/order.js:170 offerQty  20
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.065Z DEBUG controllers/order.js:171 offerAsset  BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.067Z DEBUG controllers/order.js:172 acceptAsset  BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where status='OPEN' and offer_asset = 'BTC' and accept_asset = 'BRL' and expiration_date > now() order by accept_asset_price asc  LIMIT 5 OFFSET 0;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.089Z INFO  services/AccountService.js:26 requesting address for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.108Z DEBUG controllers/order.js:185 Number of orders ->5
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.109Z DEBUG controllers/order.js:189 -> BTC , 0.00422034 BRL 163.00
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.110Z DEBUG controllers/order.js:191 offerAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BRL', fractionDigits: 2, centFactor: 100 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 16300 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.111Z DEBUG controllers/order.js:192 acceptAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BTC', fractionDigits: 8, centFactor: 100000000 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 0 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.112Z INFO  util/AssetValue.js:71    LESS THAN .. 16300- 2000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.113Z INFO  util/AssetValue.js:71    LESS THAN .. 2000- 2000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.114Z DEBUG controllers/order.js:215 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.115Z DEBUG controllers/order.js:216 acceptAsset BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.115Z DEBUG controllers/order.js:217 offerAsset BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.116Z DEBUG controllers/order.js:218 offerAmount 20
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.117Z DEBUG controllers/order.js:219 offerQty 0.00051783
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.118Z DEBUG controllers/order.js:220 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.119Z DEBUG controllers/order.js:234 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.120Z DEBUG controllers/order.js:235 Exchange INFO 
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.121Z DEBUG controllers/order.js:236 { qty: 0.00051524,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   accept_asset_price: 38622.71,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_accept_asset: 0.00000259,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_offer_asset: 0.1,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   date: 2018-01-18T04:01:47.119Z }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.122Z DEBUG controllers/order.js:237 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.125Z INFO  services/AccountService.js:29 resp.data [ { id: 'cead00b3-72e9-451f-aa69-45e0e67b2f3e',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     name: 'Flávio de Oliveira Stutz',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     asset_address: '12eM8hAVoV5ZHec1mqqFiaCbwPxusJ8LSrbThq',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     username: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     email: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     birthDate: '1981-07-11T00:00:00.000Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     cpf: '00781458994',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     ddd: '61',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     phoneNumber: '996617044',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountBranch: '8915',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountNumber: '33101930',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     createdAt: '2018-01-15T12:47:15.960Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     updatedAt: '2018-01-15T12:47:15.960Z' } ]
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where account_id = 'cead00b3-72e9-451f-aa69-45e0e67b2f3e'  and status='OPEN'  and expiration_date < now() order by "expiration_date" desc;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.318Z DEBUG services/OrderExpiredExecutor.js:12 Order Expired Executor
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.320Z INFO  services/AccountService.js:63 firing purge for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.322Z DEBUG controllers/order.js:170 offerQty  40
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.323Z DEBUG controllers/order.js:171 offerAsset  BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.325Z DEBUG controllers/order.js:172 acceptAsset  BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where status='OPEN' and offer_asset = 'BTC' and accept_asset = 'BRL' and expiration_date > now() order by accept_asset_price asc  LIMIT 5 OFFSET 0;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.343Z INFO  services/AccountService.js:26 requesting address for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.351Z DEBUG controllers/order.js:185 Number of orders ->5
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.352Z DEBUG controllers/order.js:189 -> BTC , 0.00422034 BRL 163.00
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.353Z DEBUG controllers/order.js:191 offerAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BRL', fractionDigits: 2, centFactor: 100 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 16300 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.354Z DEBUG controllers/order.js:192 acceptAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BTC', fractionDigits: 8, centFactor: 100000000 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 0 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.355Z INFO  util/AssetValue.js:71    LESS THAN .. 16300- 4000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.356Z INFO  util/AssetValue.js:71    LESS THAN .. 4000- 4000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.357Z DEBUG controllers/order.js:215 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.358Z DEBUG controllers/order.js:216 acceptAsset BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.359Z DEBUG controllers/order.js:217 offerAsset BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.360Z DEBUG controllers/order.js:218 offerAmount 40
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.361Z DEBUG controllers/order.js:219 offerQty 0.00103567
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.362Z DEBUG controllers/order.js:220 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.363Z DEBUG controllers/order.js:234 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.363Z DEBUG controllers/order.js:235 Exchange INFO 
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.364Z DEBUG controllers/order.js:236 { qty: 0.00103049,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   accept_asset_price: 38622.34,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_accept_asset: 0.00000518,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_offer_asset: 0.2,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   date: 2018-01-18T04:01:47.363Z }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.365Z DEBUG controllers/order.js:237 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.374Z INFO  services/AccountService.js:29 resp.data [ { id: 'cead00b3-72e9-451f-aa69-45e0e67b2f3e',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     name: 'Flávio de Oliveira Stutz',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     asset_address: '12eM8hAVoV5ZHec1mqqFiaCbwPxusJ8LSrbThq',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     username: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     email: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     birthDate: '1981-07-11T00:00:00.000Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     cpf: '00781458994',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     ddd: '61',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     phoneNumber: '996617044',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountBranch: '8915',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountNumber: '33101930',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     createdAt: '2018-01-15T12:47:15.960Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     updatedAt: '2018-01-15T12:47:15.960Z' } ]
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where account_id = 'cead00b3-72e9-451f-aa69-45e0e67b2f3e'  and status='OPEN'  and expiration_date < now() order by "expiration_date" desc;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.843Z DEBUG services/OrderExpiredExecutor.js:12 Order Expired Executor
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.845Z INFO  services/AccountService.js:63 firing purge for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.847Z DEBUG controllers/order.js:170 offerQty  10
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.849Z DEBUG controllers/order.js:171 offerAsset  BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.850Z DEBUG controllers/order.js:172 acceptAsset  BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where status='OPEN' and offer_asset = 'BTC' and accept_asset = 'BRL' and expiration_date > now() order by accept_asset_price asc  LIMIT 5 OFFSET 0;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.872Z INFO  services/AccountService.js:26 requesting address for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.877Z DEBUG controllers/order.js:185 Number of orders ->5
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.878Z DEBUG controllers/order.js:189 -> BTC , 0.00422034 BRL 163.00
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.879Z DEBUG controllers/order.js:191 offerAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BRL', fractionDigits: 2, centFactor: 100 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 16300 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.880Z DEBUG controllers/order.js:192 acceptAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BTC', fractionDigits: 8, centFactor: 100000000 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 0 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.881Z INFO  util/AssetValue.js:71    LESS THAN .. 16300- 1000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.882Z INFO  util/AssetValue.js:71    LESS THAN .. 1000- 1000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.883Z DEBUG controllers/order.js:215 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.884Z DEBUG controllers/order.js:216 acceptAsset BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.885Z DEBUG controllers/order.js:217 offerAsset BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.886Z DEBUG controllers/order.js:218 offerAmount 10
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.887Z DEBUG controllers/order.js:219 offerQty 0.00025892
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.888Z DEBUG controllers/order.js:220 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.889Z DEBUG controllers/order.js:234 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.890Z DEBUG controllers/order.js:235 Exchange INFO 
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.891Z DEBUG controllers/order.js:236 { qty: 0.00025763,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   accept_asset_price: 38621.97,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_accept_asset: 0.00000129,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_offer_asset: 0.05,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   date: 2018-01-18T04:01:47.889Z }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.892Z DEBUG controllers/order.js:237 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:47.901Z INFO  services/AccountService.js:29 resp.data [ { id: 'cead00b3-72e9-451f-aa69-45e0e67b2f3e',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     name: 'Flávio de Oliveira Stutz',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     asset_address: '12eM8hAVoV5ZHec1mqqFiaCbwPxusJ8LSrbThq',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     username: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     email: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     birthDate: '1981-07-11T00:00:00.000Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     cpf: '00781458994',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     ddd: '61',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     phoneNumber: '996617044',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountBranch: '8915',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountNumber: '33101930',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     createdAt: '2018-01-15T12:47:15.960Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     updatedAt: '2018-01-15T12:47:15.960Z' } ]
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where account_id = 'cead00b3-72e9-451f-aa69-45e0e67b2f3e'  and status='OPEN'  and expiration_date < now() order by "expiration_date" desc;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.540Z DEBUG services/OrderExpiredExecutor.js:12 Order Expired Executor
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.541Z INFO  services/AccountService.js:63 firing purge for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.543Z DEBUG controllers/order.js:170 offerQty  40
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.544Z DEBUG controllers/order.js:171 offerAsset  BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.545Z DEBUG controllers/order.js:172 acceptAsset  BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where status='OPEN' and offer_asset = 'BTC' and accept_asset = 'BRL' and expiration_date > now() order by accept_asset_price asc  LIMIT 5 OFFSET 0;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.562Z INFO  services/AccountService.js:26 requesting address for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.565Z DEBUG controllers/order.js:185 Number of orders ->5
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.566Z DEBUG controllers/order.js:189 -> BTC , 0.00422034 BRL 163.00
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.567Z DEBUG controllers/order.js:191 offerAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BRL', fractionDigits: 2, centFactor: 100 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 16300 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.567Z DEBUG controllers/order.js:192 acceptAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BTC', fractionDigits: 8, centFactor: 100000000 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 0 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.568Z INFO  util/AssetValue.js:71    LESS THAN .. 16300- 4000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.569Z INFO  util/AssetValue.js:71    LESS THAN .. 4000- 4000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.570Z DEBUG controllers/order.js:215 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.570Z DEBUG controllers/order.js:216 acceptAsset BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.571Z DEBUG controllers/order.js:217 offerAsset BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.571Z DEBUG controllers/order.js:218 offerAmount 40
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.572Z DEBUG controllers/order.js:219 offerQty 0.00103567
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.573Z DEBUG controllers/order.js:220 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.573Z DEBUG controllers/order.js:234 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.574Z DEBUG controllers/order.js:235 Exchange INFO 
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.575Z DEBUG controllers/order.js:236 { qty: 0.00103049,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   accept_asset_price: 38622.34,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_accept_asset: 0.00000518,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_offer_asset: 0.2,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   date: 2018-01-18T04:01:48.573Z }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.575Z DEBUG controllers/order.js:237 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.583Z INFO  services/AccountService.js:29 resp.data [ { id: 'cead00b3-72e9-451f-aa69-45e0e67b2f3e',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     name: 'Flávio de Oliveira Stutz',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     asset_address: '12eM8hAVoV5ZHec1mqqFiaCbwPxusJ8LSrbThq',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     username: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     email: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     birthDate: '1981-07-11T00:00:00.000Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     cpf: '00781458994',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     ddd: '61',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     phoneNumber: '996617044',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountBranch: '8915',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     bankAccountNumber: '33101930',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     createdAt: '2018-01-15T12:47:15.960Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     updatedAt: '2018-01-15T12:47:15.960Z' } ]
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where account_id = 'cead00b3-72e9-451f-aa69-45e0e67b2f3e'  and status='OPEN'  and expiration_date < now() order by "expiration_date" desc;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.997Z DEBUG services/OrderExpiredExecutor.js:12 Order Expired Executor
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:48.999Z INFO  services/AccountService.js:63 firing purge for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.001Z DEBUG controllers/order.js:170 offerQty  20
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.002Z DEBUG controllers/order.js:171 offerAsset  BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.004Z DEBUG controllers/order.js:172 acceptAsset  BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] Executing (default): select * from orders where status='OPEN' and offer_asset = 'BTC' and accept_asset = 'BRL' and expiration_date > now() order by accept_asset_price asc  LIMIT 5 OFFSET 0;
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.025Z INFO  services/AccountService.js:26 requesting address for flaviostutz@gmail.com
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.030Z DEBUG controllers/order.js:185 Number of orders ->5
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.031Z DEBUG controllers/order.js:189 -> BTC , 0.00422034 BRL 163.00
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.032Z DEBUG controllers/order.js:191 offerAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BRL', fractionDigits: 2, centFactor: 100 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 16300 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.033Z DEBUG controllers/order.js:192 acceptAmount ->  AssetValue {
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   asset: Asset { code: 'BTC', fractionDigits: 8, centFactor: 100000000 },
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   qty: 0 }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.034Z INFO  util/AssetValue.js:71    LESS THAN .. 16300- 2000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.035Z INFO  util/AssetValue.js:71    LESS THAN .. 2000- 2000
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.036Z DEBUG controllers/order.js:215 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.037Z DEBUG controllers/order.js:216 acceptAsset BTC
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.038Z DEBUG controllers/order.js:217 offerAsset BRL
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.039Z DEBUG controllers/order.js:218 offerAmount 20
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.040Z DEBUG controllers/order.js:219 offerQty 0.00051783
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.040Z DEBUG controllers/order.js:220 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.041Z DEBUG controllers/order.js:234 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.042Z DEBUG controllers/order.js:235 Exchange INFO 
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.043Z DEBUG controllers/order.js:236 { qty: 0.00051524,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   accept_asset_price: 38622.71,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_accept_asset: 0.00000259,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   fee_in_offer_asset: 0.1,
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]   date: 2018-01-18T04:01:49.041Z }
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.044Z DEBUG controllers/order.js:237 *************************************
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0] 2018-01-18T04:01:49.055Z INFO  services/AccountService.js:29 resp.data [ { id: 'cead00b3-72e9-451f-aa69-45e0e67b2f3e',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     name: 'Flávio de Oliveira Stutz',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     asset_address: '12eM8hAVoV5ZHec1mqqFiaCbwPxusJ8LSrbThq',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     username: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     email: 'flaviostutz@gmail.com',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     birthDate: '1981-07-11T00:00:00.000Z',
+[k8s_market-trader_market-trader-2-tjvzm_bitstock-prod_661d20c6-f713-11e7-95fa-92119a5ae80e_0]     cpf: '00781458994',
+[k8s_market-trader_m
