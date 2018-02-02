@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -e
-set -x
 
 PROJECT_NAME=$1
 BASE_VOLUMES_DIR=$2
