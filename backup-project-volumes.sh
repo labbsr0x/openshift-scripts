@@ -12,23 +12,28 @@ if [ "$PROJECT_NAME" == "" -o "$DEST_DIR" == "" -o "$BASE_VOLUMES_DIR" == "" ]; 
 fi
 
 oc project $PROJECT_NAME
-oc get pvc | cut -c 38-50 > /tmp/backup-volumes
+oc get pvc > /tmp/backup-volumes
 
 DEST_DIR_BACKUP="$DEST_DIR/$(date +%s)"
 
 mkdir -p $DEST_DIR_BACKUP
 
-echo "Archiving project volumes to $DEST_DIR_BACKUP"
+echo "Destination directory is $DEST_DIR_BACKUP"
 
-while read p; do
-  if [ -d $BASE_VOLUMES_DIR/$p ]; then
-    echo "Archiving volume $p..." 
-    tar --checkpoint=.500 -czf $DEST_DIR_BACKUP/$p.tar.gz $BASE_VOLUMES_DIR/$p
+while read line; do
+  PVC_NAME=$(echo "$line"| cut -c 1-25 | tr -d '[:space:]')
+  VOLUME_NAME=$(echo "$line"| cut -c 38-50 | tr -d '[:space:]')
+  DEST_FILE=$DEST_DIR_BACKUP/$VOLUME_NAME-$PVC_NAME.tar.gz
+  if [ -d $BASE_VOLUMES_DIR/$VOLUME_NAME ]; then
+    echo ""
+    echo "Archiving volume $BASE_VOLUMES_DIR/$VOLUME_NAME to $DEST_FILE..." 
+    tar --checkpoint=.1000 -czf $DEST_FILE $BASE_VOLUMES_DIR/$VOLUME_NAME
   else
-    if [ "$p" != "VOLUME" ]; then 
-      echo "Volume dir $BASE_VOLUMES_DIR/$p not found"
+    if [ "$VOLUME_NAME" != "VOLUME" ]; then 
+      echo "Volume dir $BASE_VOLUMES_DIR/$VOLUME_NAME not found"
     fi
   fi
 done </tmp/backup-volumes
 
+echo ""
 echo "Done. Look for backup archives in $DEST_DIR_BACKUP"
